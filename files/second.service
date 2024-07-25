@@ -1,0 +1,9 @@
+[Unit]
+# ordering dependency
+After=first.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=sleep 1
+ExecStop=sleep 1
