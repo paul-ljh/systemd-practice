@@ -1,0 +1,12 @@
+[Unit]
+# Requires= & After= are often specified together,
+# to ensure fourth.service will not that until third.service finishes activating successfully
+# if third.service is explicitly stopped via "systemctl stop third.service", fourth.service will also be stopped
+Requires=third.service
+After=third.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=sleep 1
+ExecStop=sleep 1
