@@ -1,0 +1,11 @@
+[Unit]
+# conflicts.a.service and conflicts.b.service cannot be active at the same time
+# systemd will automatically stop an active conflicts.a.service if we start conflicts.b.service
+# conflicts.b.service starts after a stop signal is sent to conflicts.a.service
+Conflicts=conflicts.a.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=sleep 1
+ExecStop=sleep 1
