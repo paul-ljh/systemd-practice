@@ -5,4 +5,5 @@ RUN rm -rf /lib/systemd/system/* /etc/systemd/system/*
 
 COPY files /lib/systemd/system
 
+WORKDIR /lib/systemd/system
 CMD ["/lib/systemd/systemd"]
