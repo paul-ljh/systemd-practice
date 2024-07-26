@@ -1,7 +1,8 @@
 [Unit]
-# requires.2 will only start after require.1.service left the state "activating".
-# Note that it is not necessary that requires.1.service transitions to active.
-After=requires.1.service
+# if requires.1.service is activated, requires.2.service will also be activated.
+# requires.1.service does not have to be in "active" state
+# with or without specifying After=, requires.2.service will be stopped (or restarted) if requires.1.service is explicitly stopped (or restarted).
+Requires=requires.1.service
 
 [Service]
 Type=oneshot

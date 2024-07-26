@@ -1,4 +1,6 @@
 [Unit]
+# after.2.service will only start after after.1.service left the state activating.
+# Note that it is not necessary that after.1.service transitions to active
 After=after.1.service
 
 [Service]
