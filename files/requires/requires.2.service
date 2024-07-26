@@ -1,11 +1,10 @@
 [Unit]
-# if requires.1.service is activated, requires.2.service will also be activated.
-# requires.1.service does not have to be in "active" state
+# activating requires.2 will activate requires.1 simultaneously
+# there is not state requirement on requires.1.service
 # with or without specifying After=, requires.2.service will be stopped (or restarted) if requires.1.service is explicitly stopped (or restarted).
 Requires=requires.1.service
 
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=sleep 1
-ExecStop=sleep 1
+ExecStart=true
