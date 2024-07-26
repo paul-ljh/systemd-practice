@@ -1,0 +1,15 @@
+[Unit]
+# ordering dependency
+# wants.2.service will start only after the wants.1.service left the state "activating"
+After=wants.1.service
+
+# requirement dependency
+# on a best-effort basis, tries to start wants.1.service
+# it does not require wants.1.service to succesfully activate or even to exist
+Wants=wants.1.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=sleep 1
+ExecStop=sleep 1
