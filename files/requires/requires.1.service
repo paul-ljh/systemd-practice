@@ -1,5 +1,5 @@
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=sleep 1
+ExecStart=false
 ExecStop=sleep 1
