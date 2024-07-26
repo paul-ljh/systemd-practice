@@ -1,8 +1,6 @@
 [Unit]
-# Requires= & After= are often specified together,
-# to ensure requires.2.service will not start until requires.1.service activated successfully
-# if requires.1.service is explicitly stopped via "systemctl stop third.service", requires.2.service will also be stopped
-Requires=requires.1.service
+# requires.2 will only start after require.1.service left the state "activating".
+# Note that it is not necessary that requires.1.service transitions to active.
 After=requires.1.service
 
 [Service]

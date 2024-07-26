@@ -1,0 +1,10 @@
+[Unit]
+# this is neither an ordering or requirement dependency
+# when partof.1.service is stopped or restarted, the same action will relay to partof.2.service simultaneously.
+PartOf=partof.1.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=sleep 1
+ExecStop=sleep 1
