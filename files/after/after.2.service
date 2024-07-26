@@ -1,5 +1,5 @@
 [Unit]
-# after.2.service will only start after after.1.service left the state activating.
+# after.2.service will only start after after.1.service transitions from state "activating" to any other state.
 # there is not state requirement on after.1.service
 After=after.1.service
 
