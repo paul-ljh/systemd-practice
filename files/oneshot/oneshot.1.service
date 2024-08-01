@@ -1,0 +1,12 @@
+[Service]
+# a Type=oneshot service waits for the command to terminate and evaluates the exit code
+# if it is considered not successful, the service will be marked as failed.
+Type=oneshot
+
+# allow oneshot service to remain in "active" state after all processes exited
+# otherwise the service will transition from activating -> deactivating -> dead
+# RemainAfterExit=true
+
+ExecStart=true
+ExecStart=false
+

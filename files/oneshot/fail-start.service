@@ -1,7 +1,0 @@
-[Service]
-Type=oneshot
-RemainAfterExit=true
-ExecStart=sleep 1
-# false is a command from GNU coreutils; all it does is to exit with a status code 1
-ExecStart=false
-ExecStop=sleep 1

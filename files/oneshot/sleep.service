@@ -1,7 +1,0 @@
-[Service]
-Type=oneshot
-# allow oneshot service to remain in "active" state after all processes exited
-# otherwise the service will transition from activating -> deactivating -> dead
-RemainAfterExit=true
-ExecStart=sleep 1
-ExecStop=sleep 1

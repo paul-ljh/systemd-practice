@@ -1,0 +1,6 @@
+[Unit]
+Requires=oneshot.1.service
+After=oneshot.1.service
+
+[Service]
+ExecStart=echo "My dependencies were activated successfully!"
