@@ -1,0 +1,5 @@
+[Service]
+# a service of simple type is considered active as soon as systemd has successfully called fork()
+# even if the subsequent execve() fails
+Type=simple
+ExecStart=/non/existent/binary

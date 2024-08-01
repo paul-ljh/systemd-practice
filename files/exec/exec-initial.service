@@ -1,0 +1,4 @@
+[Service]
+# a service of exec type is considered active once execve() succeeds
+Type=exec
+ExecStart=/non/existent/binary

@@ -1,0 +1,6 @@
+[Unit]
+Requires=simple-initial.service
+After=simple-initial.service
+
+[Service]
+ExecStart=echo "My dependencies were activated successfully!"
