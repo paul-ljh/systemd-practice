@@ -1,0 +1,8 @@
+[Service]
+# a type=forking service will be marked as active once ExecStart= command exits with code 0
+# the service will then mark the forked off process as main process
+# the service is considered active until the forked process terminates,
+# in which case it is marked inactive or failed, depending on the exit code.
+Type=forking
+# nc -k -l 18 forks off a new nc process that listens on port 18
+ExecStart=bash -c 'sleep 2; nc -k -l 18 &'

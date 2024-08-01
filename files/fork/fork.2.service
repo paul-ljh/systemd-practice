@@ -1,0 +1,7 @@
+[Unit]
+Requires=fork.1.service
+After=fork.1.service
+
+[Service]
+Type=oneshot
+ExecStart=bash -c 'echo "Hello world" | nc -N localhost 18'
