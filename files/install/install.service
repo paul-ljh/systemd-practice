@@ -1,0 +1,5 @@
+[Service]
+ExecStart=echo "Hello world!"
+
+[Install]
+WantedBy=default.target
